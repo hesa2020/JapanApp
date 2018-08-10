@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JapanApp.HiraganaListPage"
+    Title="{Binding Title}"
+    x:Name="BrowseHiraganaListPage"
+    BackgroundColor="#2b3740"
+    xmlns:local="clr-namespace:JapanApp">
+	<ContentPage.Content>
+            <ScrollView>
+                <StackLayout>
+                    <Grid Padding="0, 30, 0, 30" x:Name="TopGrid" BackgroundColor="#262c36" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="1" FontSize="20" XAlign="Start">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Grade F" ForegroundColor="White"/>                     
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <local:ColorProgressBar Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BarColor="#D53F3E" BgColor="#000" x:Name="Progress" Progress="1" BackgroundColor="Transparent" />
+                        <Label Grid.Row="0" Grid.Column="3" FontSize="20" XAlign="End">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="0%" ForegroundColor="White"/>                     
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    <Button Margin="20,10,20,0" Text="Progression" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Speed test learned" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+                    <local:ListViewNoScroll  BackgroundColor="#2b3740" x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" ItemSelected="OnItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="10" Orientation="Horizontal">
+                                        <Frame WidthRequest="65" HeightRequest="65" CornerRadius="32.5" Padding="0, 0, 0, 0" BackgroundColor="{Binding ImgBackColor}" HasShadow="false">
+                                            <Label Text="{Binding Icon}" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="45">
+                                                <Label.FontFamily>
+                                                    <OnPlatform x:TypeArguments="x:String">
+                                                        <On Platform="iOS" Value="SoukouMincho"/>
+                                                        <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                                        <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                                                    </OnPlatform>
+                                                </Label.FontFamily>
+                                            </Label>
+                                        </Frame>
+                                        <StackLayout>
+                                            <Label Text="{Binding Text}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="15" FontAttributes="Bold" TextColor="White" />
+                                            <Label Text="{Binding Description}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" TextColor="#BBB" />
+                                            <Label Text="{Binding State}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="11" TextColor="{Binding StateColor}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </local:ListViewNoScroll>
+                </StackLayout>
+            </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,11 @@
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/bin/iPhoneSimulator/Debug/JapanAppiOSJapanAppWatchExtension.dll
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/bin/iPhoneSimulator/Debug/JapanAppiOSJapanAppWatchExtension.pdb
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/coremlc/_PartialAppManifest.items
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/coremlc/_BundleResourceWithLogicalName.items
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/optimized/
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/JapanApp.iOS.JapanAppWatchExtension.csprojResolveAssemblyReference.cache
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/JapanApp.iOS.JapanAppWatchExtension.csproj.CoreCompileInputs.cache
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/JapanAppiOSJapanAppWatchExtension.dll
+/Users/sylvainmartens/Documents/JapanApp/JapanApp.iOS.JapanAppWatchExtension/obj/iPhoneSimulator/Debug/JapanAppiOSJapanAppWatchExtension.pdb

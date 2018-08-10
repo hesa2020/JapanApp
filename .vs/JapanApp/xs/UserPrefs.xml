@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{5C7A10A6-CF55-4E39-92A9-108538070ADB}|Default">
+  <MonoDevelop.Ide.ItemProperties.JapanApp.iOS.JapanAppWatchExtension>
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.JapanApp.iOS.JapanAppWatchExtension>
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/ControlsRenderer/ListViewNoScrollRenderer.cs">
+    <Files>
+      <File FileName="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/11.12.0.4/lib/msbuild/iOS/Xamarin.iOS.Common.targets" Line="510" Column="3" />
+      <File FileName="iOS/ControlsRenderer/ListViewNoScrollRenderer.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="JapanApp" expanded="True">
+            <Node name="JapanApp.iOS" expanded="True" selected="True">
+              <Node name="ControlsRenderer" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.JapanApp.iOS.JapanAppWatch PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.235FF60C-3048-4532-AD46-601F210977A5" automaticSigning="False" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/sylvainmartens/Documents/JapanApp/iOS/ControlsRenderer/ListViewNoScrollRenderer.cs" relfile="iOS/ControlsRenderer/ListViewNoScrollRenderer.cs" line="11" column="1" />
+      <Breakpoint file="/Users/sylvainmartens/Documents/JapanApp/iOS/ControlsRenderer/ListViewNoScrollRenderer.cs" relfile="iOS/ControlsRenderer/ListViewNoScrollRenderer.cs" line="12" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.JapanApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.30477CF5-C3F2-49FC-8390-916BEF329D15" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <DisabledProjects>
+    <String>Droid/JapanApp.Droid.csproj</String>
+  </DisabledProjects>
+</Properties>

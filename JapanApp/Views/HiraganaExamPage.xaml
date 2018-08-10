@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JapanApp.HiraganaExamPage"
+    BackgroundColor="#2b3740"
+    xmlns:local="clr-namespace:JapanApp">
+    <ContentPage.Content>
+            <ScrollView>
+                <StackLayout>
+                    <!-- Progress Grid -->
+                    <Grid Padding="0, 30, 0, 30" x:Name="TopGrid" BackgroundColor="#262c36" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+                        <local:ColorProgressBar Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BarColor="#D53F3E" BgColor="#000" x:Name="Progress" Progress="{Binding Progress}" BackgroundColor="Transparent" />
+                        <Label Grid.Row="0" Grid.Column="2" FontSize="20" XAlign="End" Text="{Binding ProgressText}" TextColor="White"/>
+                    </Grid>
+                    <!-- CharacterToSound -->
+                    <StackLayout x:Name="CharacterToSound" IsVisible="{Binding ShowCharacterToSound}">
+                        <Label Margin="0, 10, 0, 20" Text="Associate the sample" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                        <Label x:Name="JapaneseCharacter" Text="{Binding JapaneseCharacterText}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="125">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="SoukouMincho"/>
+                                    <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                    <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                        <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" Spacing="10" HorizontalOptions="Fill">
+                            <Button x:Name="ButtonSound1" Command="{Binding PlaySound1Command}" Text="Sample 1" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption1Color}"/>
+                            <Button x:Name="ButtonSound2" Command="{Binding PlaySound2Command}" Text="Sample 2" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption2Color}"/>
+                            <Button x:Name="ButtonSound3" Command="{Binding PlaySound3Command}" Text="Sample 3" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption3Color}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- EnglishToJapan -->
+                    <StackLayout x:Name="EnglishToJapan" IsVisible="{Binding ShowEnglishToJapan}">
+                        <Label Margin="0, 10, 0, 20" Text="Associate the symbol" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                        <Label x:Name="EnglishCharacter" Text="{Binding EnglishCharacterText}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="125"/>
+                        <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" Spacing="10" HorizontalOptions="Fill">
+                            <Button x:Name="ButtonOption1" Command="{Binding Option1Command}" Text="{Binding Option1Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption1Color}">
+                                <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="SoukouMincho"/>
+                                        <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                        <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                                    </OnPlatform>
+                                </Button.FontFamily>
+                            </Button>
+                            <Button x:Name="ButtonOption2" Command="{Binding Option2Command}" Text="{Binding Option2Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption2Color}">
+                                <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="SoukouMincho"/>
+                                        <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                        <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                                    </OnPlatform>
+                                </Button.FontFamily>
+                            </Button>
+                            <Button x:Name="ButtonOption3" Command="{Binding Option3Command}" Text="{Binding Option3Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption3Color}">
+                                <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="SoukouMincho"/>
+                                        <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                        <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                                    </OnPlatform>
+                                </Button.FontFamily>
+                            </Button>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- JapanToEnglish -->
+                    <StackLayout x:Name="JapanToEnglish" IsVisible="{Binding ShowJapanToEnglish}">
+                        <Label Margin="0, 10, 0, 20" Text="Identify the symbol" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                        <Label x:Name="JapaneseCharacter2" Text="{Binding JapaneseCharacterText}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="125"/>
+                        <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" Spacing="10" HorizontalOptions="Fill">
+                            <Button x:Name="ButtonOption1_2" Command="{Binding Option1Command}" Text="{Binding Option1Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption1Color}"/>
+                            <Button x:Name="ButtonOption2_2" Command="{Binding Option2Command}" Text="{Binding Option2Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption2Color}"/>
+                            <Button x:Name="ButtonOption3_2" Command="{Binding Option3Command}" Text="{Binding Option3Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption3Color}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- SoundToCharacter -->
+                    <StackLayout x:Name="SoundToCharacter" IsVisible="{Binding ShowSoundToCharacter}">
+                        <Label Margin="0, 10, 0, 20" Text="Identify the sample" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                        <Button Margin="20, 0, 20, 0" x:Name="PlaySample" Command="{Binding PlaySampleCommand}" Text="Play Sample" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="#0594d6"/>
+                        <StackLayout Margin="20, 20, 20, 20" Orientation="Horizontal" Spacing="10" HorizontalOptions="Fill">
+                            <Button x:Name="ButtonOption1_3" Command="{Binding Option1Command}" Text="{Binding Option1Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption1Color}"/>
+                            <Button x:Name="ButtonOption2_3" Command="{Binding Option2Command}" Text="{Binding Option2Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption2Color}"/>
+                            <Button x:Name="ButtonOption3_3" Command="{Binding Option3Command}" Text="{Binding Option3Text}" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding ButtonOption3Color}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- Results -->
+                    <StackLayout x:Name="Results" IsVisible="{Binding ShowResults}">
+                        <Label Margin="0, 10, 0, 20" Text="Results" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                        <Label Text="{Binding TotalPercent}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+                        <Grid Margin="20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="Associate sample:" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="0" Text="Find Symbol:" TextColor="White" />
+                            <Label Grid.Row="2" Grid.Column="0" Text="Associate Symbol:" TextColor="White" />
+                            <Label Grid.Row="3" Grid.Column="0" Text="Identify Sample:" TextColor="White" />
+
+                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding IdentifySymbolPercent}" XAlign="End" TextColor="White" />
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding FindSymbolPercent}" XAlign="End" TextColor="White" />
+                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding AssociateSymbolPercent}" XAlign="End" TextColor="White" />
+                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding IdentifySamplePercent}" XAlign="End" TextColor="White" />
+                        </Grid>
+                        <StackLayout Orientation="Horizontal">
+                            <Label XAlign="Start" Margin="20" Text="{Binding ErrorsLeft}" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                            <Label XAlign="End" Margin="20" Text="{Binding ErrorsRight}" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!-- Bottom -->
+                    <Frame IsVisible="{Binding ShowCorrectMessage}" HorizontalOptions="Fill" Margin="20" CornerRadius="5" Padding="10" BackgroundColor="#41a54d">
+                        <Label TextColor="White" Text="Correct!" XAlign="Center"/>
+                    </Frame>
+                    <Frame IsVisible="{Binding ShowIncorrectMessage}" HorizontalOptions="Fill" Margin="20" CornerRadius="5" Padding="10" BackgroundColor="#D53F3E">
+                        <Label TextColor="White" Text="Incorrect!" XAlign="Center"/>
+                    </Frame>
+                    <Button IsVisible="{Binding ShowValidateButton}" Margin="20" Text="Validate" Command="{Binding ValidateCommand}" BackgroundColor="#41a54d" TextColor="White" />
+                </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

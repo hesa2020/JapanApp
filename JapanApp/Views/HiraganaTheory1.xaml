@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JapanApp.HiraganaTheory1"
+    BackgroundColor="#2b3740"
+    xmlns:local="clr-namespace:JapanApp">
+	<ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="0" Padding="0">
+                <Button x:Name="ButtonIntro" BorderRadius="0" BackgroundColor="#0594d6" Text="Intro." TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="ButtonTenTen" BorderRadius="0" BackgroundColor="#262c36" Text="Ten Ten" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="ButtonMaru" BorderRadius="0" BackgroundColor="#262c36" Text="Maru" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="ButtonCombi" BorderRadius="0" BackgroundColor="#262c36" Text="Combi." TextColor="White" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <ScrollView Margin="0, -6, 0, 00">
+                <StackLayout Margin="0, 0, 0, 15" Padding="0, 0, 0, 10">
+                    <StackLayout x:Name="TabIntro" IsVisible="true">
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="HIRAGANA" TextColor="White" FontSize="23" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                <Label Text="ひらがな" TextColor="#0594d6" FontAttributes="Bold" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Padding="10">
+                            <Label Text="We currently count 46 characters in this syllabary." FontSize="14" TextColor="#0594d6"/>
+                            <Label Text="Unlike other roman languages like english, who use vowels and consonants to form an alphabet, the Hiragana and Katakana are grouped to form a syllabary (ka, ki, ku, ke, ko, etc...)." FontSize="14" TextColor="White"/>
+                            <Label Margin="0, 10, 0, 0" Text="In this first part, we will study the hiragana, which are essential to know in order to have good bases in japanese." FontSize="14" TextColor="White"/>
+                        </StackLayout>
+
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="ROMAJI" TextColor="White" FontSize="23" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                                <Label Text="Romaji" TextColor="#0594d6" FontAttributes="Bold" FontSize="25" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Padding="10">
+                            <Label Text="Is the name used to reffer to the roman characters (our alphabet)." FontSize="14" TextColor="White"/>
+                            <Label Margin="0, 10, 0, 0" Text="The japanese rarely use them, but we will use them to write the pronunciation of the hiragana." FontSize="14" TextColor="White"/>
+                        </StackLayout>
+
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <Label Text="Pronunciation" TextColor="White" FontSize="23" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                        </Frame>
+
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="A" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'a' in 'art'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="I" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'ea' in 'eat'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="U" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'oo' in 'food'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="E" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'e' in 'bed'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="O" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'o' in 'orange'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="S" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 's' in 'social'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="SH" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'sh' in 'shade'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="CH" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'tch' in 'check'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="H" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'h' in 'hat'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="R" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'l' in 'label'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#3d3d3d" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="W" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'w' in 'wolf', 'wa' becommes 'oua'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#435977" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, -6, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Margin="10, 0, 0, 0" Text="J" WidthRequest="30" HorizontalTextAlignment="Center" TextColor="#0594d6" FontSize="25" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                                <Label Margin="10, 0, 0, 0" Text="Pronounces like the 'dj' in 'Jeep'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <!-- Tab Ten Ten -->
+                    <StackLayout x:Name="TabTenTen" IsVisible="true">
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="Ten Ten" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Margin="10" Text="The dakuten (濁点, 'sound point') more familiarly ten-ten (点点, 'point point') is a sign composed of 2 little line. Always on the top right side of the characters, allows to transform the consonants." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The serie of 'K' transform into 'G'" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="か" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ka →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="が" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ga" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="き" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ki →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="ぎ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="gi" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="く" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ku →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぐ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="gu" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="け" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ke →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="げ"  WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ge" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="こ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ko →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ご" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="go" TextColor="White" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <!-- S -> Z -->
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The serie of 'S' transform into 'Z'" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="さ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="sa →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ざ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="za" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="し" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="shi →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="じ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ji" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="す" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="su →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ず" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="zu" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="せ" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="se →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="ぜ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ze" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="そ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="so →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぞ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="zo" TextColor="White" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <!-- T -> D -->
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The serie of 'T' transform into 'D'" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="た" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ta →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="だ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="da" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ち" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="chi →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="ぢ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="ji" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="つ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="tsu →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="づ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="zu" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="て" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="te →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="で" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="de" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="と" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="to →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ど" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="do" TextColor="White" HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <!-- H -> B -->
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The serie of 'H' transform into 'B'" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="は" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ha →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ば" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ba" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ひ" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="hi →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="び" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="bi" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ふ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="fu →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぶ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="bu" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="へ" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="he →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="べ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="be" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ほ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ho →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぼ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="bo" TextColor="White" HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <!-- Tab Maru -->
+                    <StackLayout x:Name="TabMaru" IsVisible="true">
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="Maru" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Margin="10" Text="The handakuten (半濁点, 'semi sound point') more familiarly maru (丸, 'round') is a sign represented by a little circle. allowing to transform 'h' into 'p'." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The serie of 'H' transform into 'P'" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="は" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ha →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぱ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="pa" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ひ" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="hi →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="ぴ" WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="pi" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ふ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="fu →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぷ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="pu" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="へ" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="he →" WidthRequest="50" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                            <Label Text="ぺ"  WidthRequest="25" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text="pe" WidthRequest="35" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ほ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="ho →" TextColor="White" HorizontalOptions="Start"/>
+                            <Label Text="ぽ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text="po" TextColor="White" HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <!-- Tab Combi -->
+                    <StackLayout x:Name="TabCombi" IsVisible="true">
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="Combinations" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Margin="10" Text="By combinating the hiragana of base, we create new sound. Here is a list of possible combinations." TextColor="White" FontSize="14" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The classical combinations" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="きゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → kya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="きゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → kyu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="きょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → kyo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="しゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → sha" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="しゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → shu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="しょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → sho" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ちゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → cha" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="ちゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → chu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ちょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → cho" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="にゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → nya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="にゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → nyu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="にょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → nyo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ひゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → hya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="ひゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → hyu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ひょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → hyo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="みゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → mya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="みゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → myu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="みょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → myo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="りゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → rya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="りゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → ryu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="りょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → ryo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The combinations of dakuten" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ぎゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → gya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="ぎゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → gyu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ぎょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → gyo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="じゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → ja" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="じゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → ju" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="じょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → jo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="びゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → bya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="びゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → byu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="びょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → byo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                        <Frame BackgroundColor="#191919" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10" Margin="0, 15, 0, 0" CornerRadius="0" HasShadow="false">
+                            <StackLayout>
+                                <Label Text="The combinations of handakuten" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20, 10, 20, 0">
+                            <Label Text="ぴゃ" TextColor="Red" HorizontalOptions="Start"/>
+                            <Label Text=" → pya" TextColor="White" HorizontalOptions="Start"/>
+
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                            <Label Text="ぴゅ" TextColor="Red" HorizontalOptions="Center"/>
+                            <Label Text=" → pyu" TextColor="White" HorizontalOptions="Center"/>
+                            <Label Text="" TextColor="White" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="ぴょ" HorizontalTextAlignment="End" TextColor="Red" HorizontalOptions="End"/>
+                            <Label Text=" → pyo" WidthRequest="60" HorizontalTextAlignment="End" TextColor="White" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

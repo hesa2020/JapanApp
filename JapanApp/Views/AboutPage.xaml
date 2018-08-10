@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JapanApp.AboutPage"
+    xmlns:vm="clr-namespace:JapanApp;"
+    Title="{Binding Title}"
+    BackgroundColor="#2b3740">
+	<ContentPage.BindingContext>
+		<vm:AboutViewModel />
+	</ContentPage.BindingContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<StackLayout BackgroundColor="#262c36" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+				<ContentView Padding="0, 20, 0, 20" VerticalOptions="FillAndExpand">
+					<Label FontSize="40">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Japan" ForegroundColor="White"/>
+                                    <Span Text="App" ForegroundColor="#0594d6"/>                        
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+				</ContentView>
+			</StackLayout>
+		</StackLayout>
+		<ScrollView Grid.Row="1">
+			<StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
+				<Label FontSize="22">
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="JapanApp" FontAttributes="Bold" FontSize="22" ForegroundColor="White"/>
+								<Span Text=" " />
+								<Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="This app has been written with love by" ForegroundColor="White"/>
+								<Span Text=" " />
+								<Span Text="Sylvain William Martens" FontAttributes="Bold" ForegroundColor="White"/>
+								<Span Text="." />
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<FormattedString.Spans>
+								<Span Text="It's 100% free and will remain, however" ForegroundColor="White"/>
+								<Span Text=" " />
+								<Span Text="donations encourage me and contribute to the development of other and better applications." ForegroundColor="White" FontAttributes="Bold"/>                        
+							</FormattedString.Spans>
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Button Margin="0,10,0,0" Text="Donate ❣♥" Command="{Binding OpenWebCommand}" BackgroundColor="{StaticResource Primary}" TextColor="White" />
+			</StackLayout>
+		</ScrollView>
+	</Grid>
+</ContentPage>

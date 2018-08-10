@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JapanApp.HiraganaCoursePage"
+    BackgroundColor="#2b3740"
+    xmlns:local="clr-namespace:JapanApp">
+	<ContentPage.Content>
+            <ScrollView>
+                <StackLayout>
+                    <Grid Padding="0, 30, 0, 30" x:Name="TopGrid" BackgroundColor="#262c36" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="10" />
+                        </Grid.ColumnDefinitions>
+                        <local:ColorProgressBar Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BarColor="#D53F3E" BgColor="#000" x:Name="Progress" Progress="{Binding Progress}" BackgroundColor="Transparent" />
+                        <Label Grid.Row="0" Grid.Column="2" FontSize="20" XAlign="End" Text="{Binding ProgressText}" TextColor="White"/>
+                    </Grid>
+                    <Label Margin="0, 0, 0, 20" Text="{Binding Item.Text}" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="25"/>
+                    <Label x:Name="JapaneseCharacter" Text="{Binding JapaneseCharacterText}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="125">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="iOS" Value="SoukouMincho"/>
+                                <On Platform="Android" Value="SoukouMincho.ttf#SoukouMincho"/>
+                                <On Platform="WinPhone" Value="\Assets\SoukouMincho.ttf#SoukouMincho"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Label x:Name="EnglishCharacter" Text="{Binding EnglishCharacterText}" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+                    <Button Margin="20" Text="OK" Command="{Binding NextCommand}" BackgroundColor="#41a54d" TextColor="White" />
+                </StackLayout>
+            </ScrollView>
+	</ContentPage.Content>
+</ContentPage>
